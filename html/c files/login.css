@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "Amoria";
+    src: url("../fonts/AMORIA.otf") format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/download\ \(9\).png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}           
+
+.loader-container {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #282727;
+}
+
+.loader {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 16px;
+    border: 6px solid rgba(255, 255, 255, 0.25);
+    border-top-color: #2d5e9d;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
+
+.loader-container h3,
+.loader-container p {
+    margin: 4px 0;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    width: min(460px, 100%);
+    min-height: 420px;
+    margin: 20px;
+    padding: 36px;
+    background-color: #dbd8d857;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(3px);
+}
+
+.container h2 {
+    margin: 0 0 12px;
+    font-family: "Amoria", Arial, sans-serif;
+    font-size: 38px;
+    color: #b50707;
+}
+
+.container p {
+    margin: 0 0 24px;
+    line-height: 1.5;
+    color: #252424;
+}
+
+.inputBox {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.inputBox input {
+    background-color: #ffffff3b;
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 6px;
+    font: 16px Arial, sans-serif;
+    outline: none;
+}
+
+.inputBox input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.55);
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 46px;
+    border: 0;
+    border-radius: 8px;
+    background: #e1dcdc13;
+    color: #1d1b1b;
+    font: bold 16px Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+input[type="submit"]:hover {
+    background: #111;
+    color: #fff;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+        background-attachment: scroll;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 24px 20px;
+        border-radius: 14px;
+    }
+
+    .container h2 {
+        font-size: 32px;
+    }
+
+    .loader-container {
+        padding: 24px;
+        text-align: center;
+    }
+
+    .inputBox input,
+    input[type="submit"] {
+        min-height: 48px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        padding: 20px 16px;
+    }
+
+    .container h2 {
+        font-size: 28px;
+    }
+}

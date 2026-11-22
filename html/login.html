@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#282727">
+    <title>login page</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="c files/login.css">
+</head>
+<body>
+      <div class="loader-container" id="loader-container">
+        <div class="loader"></div>
+        <h3>Loading...</h3>
+        <p>Please wait while we prepare everything.</p>
+    </div>
+
+
+  <div class="container" id="content" style="display: none;">
+    <h2>Login</h2>
+    <p>Enter your email address and password to continue.</p>
+    <form action="http://localhost:8080/logins/login.php" method="post">
+      <div class="inputBox">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <label for="email"></label>
+      </div>
+      <div class="inputBox">
+        <input type="password" id="password" name="password" placeholder="Enter your password" minlength="8" autocomplete="current-password" required>
+        <label for="password"></label>
+      </div>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+  <div>
+    <script src="loading.js"></script>
+  </div>
+</body>
